@@ -51,7 +51,7 @@
         default_layer {
             label = "default layer";
             bindings = <
-                            &kp KP_A  &kp KP_B  &kp KP_C  &kp D  &kp E &kp F  &kp G  &kp H
+                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &kp H
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -61,7 +61,7 @@
         fn_layer {
             label = "fn layer";
             bindings = <
-                            &kp ESC    &none         &bt BT_CLR      &kp DEL  &kp EP_TOG &kp EP_OFF    &kp EP_ON       &kp KP_DIVIDE
+                            &kp ESC    &kp J    &bt BT_CLR    &kp DEL    &kp EP_TOG    &kp EP_OFF    &kp EP_ON    &kp KP_DIVIDE
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
