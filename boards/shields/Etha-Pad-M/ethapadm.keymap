@@ -20,24 +20,6 @@
  *  | 12 13 14 15 16 |
  *  ------------------
  */
-    combos {
-        compatible = "zmk,combos";
-        combo_bootloader {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <1 2>;
-            bindings = <&bootloader>;
-        };
-        combo_bt_nxt {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <1 4>;
-            bindings = <&bt BT_NXT>;
-        };
-        combo_btclr {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <1 6>;
-            bindings = <&bt BT_CLR>;
-        };
-    };
 
     sensors {
         compatible = "zmk,keymap-sensors";
