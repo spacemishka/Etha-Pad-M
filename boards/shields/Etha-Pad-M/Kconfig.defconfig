@@ -1,7 +1,7 @@
 if SHIELD_ETHAPADM
 
 config ZMK_USB
-	default y
+	default n
 
 config ZMK_KEYBOARD_NAME
     default "Etha Pad M"
