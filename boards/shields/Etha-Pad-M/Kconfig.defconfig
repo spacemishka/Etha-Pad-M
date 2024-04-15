@@ -1,4 +1,4 @@
-if SHIELD_ZHERKIN
+if SHIELD_ETHAPADM
 
 config ZMK_USB
 	default y
