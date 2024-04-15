@@ -61,7 +61,7 @@
         fn_layer {
             label = "fn layer";
             bindings = <
-                            &kp ESC    &kp J    &bt BT_CLR    &kp DEL    &kp EP_TOG    &kp EP_OFF    &kp EP_ON    &kp KP_DIVIDE
+                            &kp ESC    &kp J    &kp K    &kp DEL    &kp EP_TOG    &kp EP_OFF    &kp EP_ON    &kp KP_DIVIDE
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
