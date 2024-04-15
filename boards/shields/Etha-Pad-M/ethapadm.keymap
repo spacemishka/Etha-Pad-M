@@ -5,6 +5,8 @@
 
 #define TIMEOUT 50
 #define DEFAULT 0
+#define LOWER 1
+
 &kscan0 {
     debounce-scan-period-ms = <10>;
 };
@@ -12,7 +14,7 @@
     status = "okay";
 };
 &led_strip {
-    chain-length = <8>;
+    chain-length = <6>;
 };
 / {
 /*  ------------------
@@ -33,7 +35,15 @@
 
         default_layer {
             bindings = <
-                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &kp H
+                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &mo LOWER
+
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
+        };
+        lower_layer {
+            bindings = <
+                            &rgb_ug RGB_TOG &rgb_ug RGB_EFF  &rgb_ug RGB_EFF   &kp D  &kp E &kp F  &kp G  &kp H
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
