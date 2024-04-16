@@ -15,6 +15,11 @@
 &left_encoder {
     status = "okay";
 };
+
+&right_encoder {
+    status = "disabled";
+};
+
 &led_strip {
     chain-length = <8>;
 };
@@ -29,7 +34,7 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
+        sensors = <&left_encoder &right_encoder>;
     };
 
     keymap0: keymap {
