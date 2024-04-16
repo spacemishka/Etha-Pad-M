@@ -50,7 +50,7 @@
         };
         lower_layer {
             bindings = <
-                            &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &kp D  &kp E &kp F  &kp G  &kp H
+                            &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &kp F  &kp G  &kp H
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
