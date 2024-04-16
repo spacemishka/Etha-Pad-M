@@ -22,7 +22,7 @@
 
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
+    pinctrl-names = "default", "default";
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
@@ -32,7 +32,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <6>; /* Change this according to how many leds are on the strip */
+        chain-length = <8>; /* Change this according to how many leds are on the strip */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
