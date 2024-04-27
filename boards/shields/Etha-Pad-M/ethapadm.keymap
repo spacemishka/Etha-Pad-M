@@ -8,7 +8,8 @@
 
 #define TIMEOUT 50
 #define DEFAULT 0
-#define LOWER 1
+#define RESOLVE 1
+#define LOWER 2
 
 &kscan0 {
     debounce-scan-period-ms = <10>;
@@ -43,13 +44,21 @@
 
         default_layer {
             bindings = <
-                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &mo LOWER
+                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &mo RESOLVE
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
         };
-        lower_layer {
+
+        resolve_layer {
+            bindings = <
+                            &kp I    &kp O    &mt LCTRL T    &kp B  &kp T &kp W  &kp A  &mo LOWER
+
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+        };        lower_layer {
             bindings = <
                             &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &kp F  &kp G  &kp H
 
