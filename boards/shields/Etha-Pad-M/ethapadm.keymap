@@ -56,7 +56,7 @@
                             &kp I    &kp O    &mt LCTRL T    &kp B  &kp T &kp W  &kp A  &mo LOWER
 
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 
         };        lower_layer {
             bindings = <
