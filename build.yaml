@@ -17,11 +17,11 @@
 #     artifact-name: corne_left_with_logging
 #
 include:
-  - board: bluemicro840_v1
+  - board: bluemicro840_nrf52840_zmk
     shield: ethapadm
   - board: nice_nano_v2
     shield: ethapadm
-  - board: bluemicro840_v1
+  - board: bluemicro840_nrf52840_zmk
     shield: settings_reset
   - board: nice_nano_v2
     shield: settings_reset
