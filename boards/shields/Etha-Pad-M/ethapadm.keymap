@@ -3,10 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define TIMEOUT 50
 #define DEFAULT 0
 #define RESOLVE 1
 #define LOWER 2
@@ -36,7 +34,7 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
+        sensors = <&left_encoder>;
     };
 
     keymap0: keymap {
@@ -44,23 +42,28 @@
 
         default_layer {
             bindings = <
-                            &kp A  &kp B  &kp C  &kp D  &kp E &kp F  &kp G  &to RESOLVE
+                            &kp SPACE   &kp J      &kp K      &kp L
+                            &kp I       &kp O      &kp HOME   &to RESOLVE
 
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
 
         };
 
         resolve_layer {
             bindings = <
-                            &kp I    &kp O    &mt LCTRL T    &kp B  &kp T &kp W  &kp A  &to DEFAULT
+                            &kp LC(Z)           &kp LS(LC(Z))      &kp LC(S)          &kp LC(B)
+                            &kp LC(BACKSPACE)   &kp DELETE         &kp M              &to DEFAULT
 
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
 
-        };        lower_layer {
+        };
+
+        lower_layer {
             bindings = <
-                            &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &kp F  &kp G  &kp H
+                            &rgb_ug RGB_TOG    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR
+                            &rgb_ug RGB_BRI    &rgb_ug RGB_BRD    &kp F  &kp G  &kp H
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
